@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Quiz — JavaScript DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz-container">
+    <header class="top-bar">
+      <h1>Kuis DOM &amp; Events</h1>
+      <button id="themeBtn" class="ghost-btn" type="button" aria-label="Ganti tema">🌙 Mode gelap</button>
+    </header>
+
+    <!-- Layar kuis -->
+    <section class="quiz-content" id="quizContent">
+      <div class="meta">
+        <span id="progress">Soal 1/8</span>
+        <span id="timer" aria-live="off">⏱ 15</span>
+      </div>
+      <div class="bar"><div id="progressBar" class="bar-fill"></div></div>
+
+      <h2 id="question"></h2>
+      <div id="options" class="options-grid"></div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="nextBtn" class="primary-btn hidden" type="button">Lanjut</button>
+    </section>
+
+    <!-- Layar hasil -->
+    <section id="result" class="result hidden">
+      <h2>Kuis selesai</h2>
+      <p class="big">Skor: <span id="score"></span></p>
+      <p>Skor tertinggi: <span id="highScore"></span></p>
+      <button id="restartBtn" class="primary-btn" type="button">🔄 Ulangi kuis</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
